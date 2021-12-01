@@ -1,6 +1,8 @@
 // https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1#
 // https://www.youtube.com/watch?v=LjPx4wQaRIs&list=PLgUwDviBIf0pmWCl2nepwGDO05a0-7EfJ&index=2
 
+// notes num - 10
+
 findPlatform(arr, dep, n);
 {
   arr.sort((a, b) => a - b);

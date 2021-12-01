@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/subsets/
+// notes num - 7
 var subsets = function(nums, iOrE=[], output=[], index=0) {
     if(index >= nums.length){
         output.push(iOrE)

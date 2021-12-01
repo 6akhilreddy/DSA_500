@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/count-and-say/
+// notes num - 2
+
 var countAndSay = function (A) {
   if (A === 1) return "1";
   let strNum = countAndSay(A - 1);

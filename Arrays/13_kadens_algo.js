@@ -23,6 +23,8 @@
 
 //https://www.youtube.com/watch?v=w_KEocd__20
 
+// notes num -12
+
 function maxSumSubArr(arr){
     let sum = 0;
     let max = arr[0];

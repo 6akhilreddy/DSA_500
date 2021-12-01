@@ -1,6 +1,8 @@
 // https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1#
 // https://www.youtube.com/watch?v=LjPx4wQaRIs&list=PLgUwDviBIf0pmWCl2nepwGDO05a0-7EfJ&index=3
 
+// notes num - 9
+
 JobScheduling(arr, n);
 {
   // code here

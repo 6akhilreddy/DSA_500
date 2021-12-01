@@ -1,6 +1,8 @@
 // https://leetcode.com/problems/longest-common-subsequence/
 // https://www.youtube.com/watch?v=sSno9rV8Rhg
 // https://www.youtube.com/watch?v=LAKWWDX3sGw
+
+// notes num - 4
 var longestCommonSubsequence = function(text1, text2) {
     return LCS(text1, text2, 0,0)
 };

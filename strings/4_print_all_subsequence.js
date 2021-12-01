@@ -1,3 +1,4 @@
+// notes num - 6
 function printAllSubsequnce(input, output){
     if(input.length === 0){
         console.log(output);
