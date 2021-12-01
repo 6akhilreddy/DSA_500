@@ -13,6 +13,7 @@
 // Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
 
 // https://www.youtube.com/watch?v=muDPTDrpS28
+// https://leetcode.com/problems/jump-game/
 
 function canJump(nums){
     let maxReach = 0;
@@ -46,6 +47,8 @@ console.log(canJump(nums))
 // Input: nums = [2,3,0,1,4]
 // Output: 2
 
+// https://leetcode.com/problems/jump-game-ii/
+
 
 function minJumpsToEnd(nums){
     let steps = 0;
@@ -63,4 +66,18 @@ function minJumpsToEnd(nums){
     }
 
     return steps
+}
+
+// https://www.youtube.com/watch?v=wLPdkLM_BWo
+
+function minJumps(nums){
+    let farthest = 0, current = 0, jumps=0;
+    for(let i=0; i<nums.length-1;i++){
+        farthest = Math.max(farthest, nums[i]+i);
+        if(i === current){
+            current = farthest;
+            jumps++
+        }
+    } 
+    return jumps
 }
