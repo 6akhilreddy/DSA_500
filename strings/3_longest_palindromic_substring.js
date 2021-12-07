@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/longest-palindromic-substring/
+// notes num - 3
+
 var longestPalindrome = function (s) {
   let maxLen = 1,
     start = 0,

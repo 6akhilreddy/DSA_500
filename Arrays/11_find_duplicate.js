@@ -22,6 +22,7 @@
 // Output: 1
 
 // This solution will not work if the repating ele is multiple ex: [1,2,2,2,3,4]
+// notes num -13
 function findDuplicate1(nums){
     const eleSum = nums.reduce((a, b) => a + b, 0)
     const n = nums.length-1;

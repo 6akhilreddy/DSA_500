@@ -1,6 +1,8 @@
 // https://leetcode.com/problems/longest-increasing-subsequence/
 // https://www.youtube.com/watch?v=SHFyIAnjj90
 
+// notes num - 5
+
 var lengthOfLIS = function(nums) {
     return lis(nums, 0, -1)
 };
