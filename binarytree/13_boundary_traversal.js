@@ -45,37 +45,43 @@ class BinaryTree{
         }
 
         const leftBoundary  = (root, output) => {
-            if(!root) return;
-            if(isLeafNode(root)) return
-            output.push(root.val);
-            if(root.left) leftBoundary(root.left, output)
-            else if(root.right) leftBoundary(root.right, output)
+            let node = root.left
+            while(node){
+                if(!isLeafNode(node)) output.push(node.data);
+                if(node.left) node = node.left;
+                else node = node.right
+            }
         }
 
         const leafNodes = (root, output) => {
-            if(!root) return
-            if(isLeafNode(root)) output.push(root.val)
-            leafNodes(root.left, output)
-            leafNodes(root.right, output)
+            if(isLeafNode(root)){
+                output.push(root.data)
+                return
+            }
+            if(root.left)leafNodes(root.left, output)
+            if(root.right)leafNodes(root.right, output)
         }
 
-        const rightBoundary = (root, output, tempArr = []) => {
-            if(!root) return;
-            if(isLeafNode(root)) return;
-            tempArr.push(root.val);
-            if(root.right) leftBoundary(root.right, output)
-            else if(root.left) leftBoundary(root.left, output)
-
-            for(let i=tempArr.length-2; i>=0; i--){
+        const rightBoundary = (root, output) => {
+            let node = root.right
+            const tempArr = [];
+            while(node){
+                if(!isLeafNode(node)) tempArr.push(node.data);
+                if(node.right) node = node.right;
+                else node = node.left
+            }
+            
+            for(let i=tempArr.length-1; i>=0; i--){
                 output.push(tempArr[i])
             }
         }
 
         const output = [];
+        if(!isLeafNode(root)) output.push(root.data)
         leftBoundary(root, output)
         leafNodes(root, output)
         rightBoundary(root, output)
-        console.log(output)
+        return output
     }
 }
 
